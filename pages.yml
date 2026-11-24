@@ -1,0 +1,45 @@
+name: Publish OFFB APT repository
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+      - name: Validate DEB with Debian tools
+        run: |
+          for f in debs/*.deb; do
+            dpkg-deb --info "$f"
+            dpkg-deb --contents "$f" > /dev/null
+          done
+      - name: Generate APT metadata
+        run: python scripts/build_repo.py
+      - name: Stage only public distribution files
+        run: |
+          mkdir -p _site
+          cp index.html Release Packages Packages.gz Packages.bz2 CydiaIcon.png packages-report.json .nojekyll _site/
+          cp -r debs _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
