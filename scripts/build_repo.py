@@ -60,17 +60,35 @@ def control_fields(data):
     return result
 
 
+def validate_policy(data, fields, policy):
+    if fields['Package'] != policy['required_package'] or fields['Version'] != policy['required_version']:
+        raise ValueError('Unexpected release in debs/: keep only the version selected in release-policy.json')
+    members = ar_members(data)
+    payloads = [v for k, v in members.items() if k.startswith('data.tar.') or k == 'data.tar']
+    if len(payloads) != 1:
+        raise ValueError('Expected one data archive')
+    forbidden = set(policy['forbidden_payload_filenames'])
+    with tarfile.open(fileobj=io.BytesIO(payloads[0]), mode='r:*') as archive:
+        for entry in archive.getmembers():
+            if entry.name.rstrip('/').split('/')[-1] in forbidden:
+                raise ValueError('Known failing branding module is present: ' + entry.name)
+
+
 def build(root):
     root = Path(root).resolve()
     entries = []
     architectures = set()
     reports = []
     identities = set()
+    policy_path = root / 'release-policy.json'
+    policy = json.loads(policy_path.read_text(encoding='utf-8')) if policy_path.exists() else None
     for deb in sorted((root / 'debs').glob('*.deb')):
         if deb.is_symlink() or not re.fullmatch(r'[A-Za-z0-9.+_~-]+\.deb', deb.name):
             raise ValueError('Unsafe DEB filename')
         data = deb.read_bytes()
         fields = control_fields(data)
+        if policy:
+            validate_policy(data, fields, policy)
         identity = tuple(fields[k] for k in ['Package', 'Version', 'Architecture'])
         if identity in identities:
             raise ValueError('Duplicate package/version/architecture')
@@ -82,6 +100,8 @@ def build(root):
             MD5sum=hashlib.md5(data).hexdigest(), SHA256=hashlib.sha256(data).hexdigest(), SHA512=hashlib.sha512(data).hexdigest())
         entries.append('\n'.join(f'{k}: {v}' for k, v in fields.items()) + '\n\n')
         reports.append({k: fields[k] for k in ['Package', 'Version', 'Architecture', 'Filename', 'Size', 'SHA256']})
+    if policy and not reports:
+        raise ValueError('No approved DEB found in debs/')
     packages = ''.join(entries).encode('utf-8')
     indexes = {'Packages': packages, 'Packages.gz': gzip.compress(packages, mtime=0), 'Packages.bz2': bz2.compress(packages)}
     for filename, content in indexes.items():
