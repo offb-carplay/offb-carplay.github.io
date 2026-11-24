@@ -1,0 +1,20 @@
+Origin: OFFB CarPlay
+Label: OFFB CarPlay — Experimental
+Suite: stable
+Codename: offb
+Date: Tue, 24 Nov 2026 09:58:59 GMT
+Architectures: iphoneos-arm64e
+Components: main
+Description: OFFB CarPlay experimental package repository
+MD5Sum:
+ e65de5fda7f8dea9538fee83d172a6c3             1876 Packages
+ 04dee45db45fb2634566bbdf7a994651              841 Packages.gz
+ f2e87f6ab66a5d355a2a8dda5b06b03c             1019 Packages.bz2
+SHA256:
+ ff87db8009c34b6ab0760d34f94f3caf683f681736fb3b617480fedce2b8af63             1876 Packages
+ bac2e5aefc5770b85b6cbf198d873d5983559fd793efbf1aa01dd36203d8be17              841 Packages.gz
+ a0a6a9f1251730b96f7d43b9e5acde620dd077b03bce64adb51b842089928e76             1019 Packages.bz2
+SHA512:
+ 76bb311e4e016966f93d6eead3f7de89df05174692695103ebc5ada8005e3061de44d177f3f4138d28c5309d0cde36cb28e9ce8293703a05f2f4b3e69074dd8e             1876 Packages
+ 40273089727d08a40ecbbfdef0686f00565148e3980e5ab81262d57a1d9b66b748a04a6de98181a8f615b07fa9d6cc5929ad737fd37d66f50fc6de38fe60f2d3              841 Packages.gz
+ feba780a7d1e90fec3158ecf58972cceb8f316333990510538263e23fdfac8e37044fb7dac829af910b9b4584f3a19c3c3e613be2b19b80edbbfc60a510e211e             1019 Packages.bz2
