@@ -1,0 +1,35 @@
+Package: vn.cloud247.carplay-rebuild.m1
+Name: OFFB-Carplay
+Version: 1.0.3.4+ios18test1.offb1
+Architecture: iphoneos-arm64e
+Description: Đa nhiệm chia màn hình CarPlay, Phone UI mượt, HUD tốc độ 1.3 và âm thanh thông minh trên xe.
+Maintainer: Cloud247
+Author: Cloud247
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), uikittools (>= 2.1.1)
+Conflicts: com.cardashlite.tweak, com.pavunato.carsurf, com.leftyfl1p.carbridge13, com.leftyfl1p.carbridge, com.duodash.tweak, com.omnicar.core, com.omnicar.splitscreen
+Priority: optional
+X-CarFlow-Compatibility-Test: ios18-test1
+Filename: debs/vn.cloud247.carplay-rebuild.m1_1.0.3.4+ios18test1.offb1_iphoneos-arm64e.deb
+Size: 3120592
+MD5sum: 5e2b596cc74ec072320052c953e00721
+SHA256: 4d2df982af727401c1a60f91bb929cf542d1550386a21a8819900df462a17e34
+SHA512: 1547b5dab4d5fc625ae55bb53361026e532690bd8ece221c6f79816c1f6171320d6d2c6df3a2c061984ef47a5d5c0a0eebdfc70ac975410e98a4b644bd11fb0d
+
+Package: vn.cloud247.carplay-rebuild.m1
+Name: OFFB-Carplay
+Version: 1.0.3.7+offb1
+Architecture: iphoneos-arm64e
+Description: Đa nhiệm chia màn hình CarPlay, Phone UI mượt, HUD tốc độ 1.3 và âm thanh thông minh trên xe.
+Maintainer: Cloud247
+Author: Cloud247
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0), uikittools (>= 2.1.1)
+Conflicts: com.cardashlite.tweak, com.pavunato.carsurf, com.leftyfl1p.carbridge13, com.leftyfl1p.carbridge, com.duodash.tweak, com.omnicar.core, com.omnicar.splitscreen
+Priority: optional
+Filename: debs/vn.cloud247.carplay-rebuild.m1_1.0.3.7+offb1_iphoneos-arm64e.deb
+Size: 3289824
+MD5sum: a650f33c7d5e87b5a4ce4983a48b343e
+SHA256: ea5db5ad3e8494359187a62889f7ead9b75774c06bf6b18682acf1d7425ff0c8
+SHA512: d2d292524fe000ea4b1fc4fbf134fde964eed8a40e3ad7ed6a21a9390ad80492fb4231889d2feba7a219620917a0484336ecd32963b6e0df31b03c524bc47d48
+
