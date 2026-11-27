@@ -32,3 +32,20 @@ MD5sum: d7c80962ebdd133d3a6ab313ee4328e7
 SHA256: ac9a3b076e8c7216de2566abf933b156829ddca807930834dfd8bfa13045fffe
 SHA512: ac1c63765da14ca4fa96d98558a0c3cfdcbb994e109641c13f7911ef4e1fe1d3f7a1ebaf0954db62ad2e938675658b6bcd3af675103c93797f208e094813be08
 
+Package: vn.cloud247.carplay-rebuild.m1
+Name: OFFB-Carplay
+Version: 1.0.4.2+offb1
+Architecture: iphoneos-arm64e
+Description: Đa nhiệm chia màn hình CarPlay, Phone UI mượt, HUD tốc độ 1.3 và âm thanh thông minh trên xe.
+Maintainer: Cloud247
+Author: Cloud247
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 15.0), uikittools (>= 2.1.1)
+Conflicts: com.cardashlite.tweak, com.pavunato.carsurf, com.leftyfl1p.carbridge13, com.leftyfl1p.carbridge, com.duodash.tweak, com.sensetechlab.duodash, com.sensetechlab.duodash.rescuer, com.omnicar.core, com.omnicar.splitscreen
+Priority: optional
+Filename: debs/OFFB-CarPlay_1.0.4.2+offb1_Trial15_RootHide_TEST.deb
+Size: 4346588
+MD5sum: 0bb90619d8662da59a220e21e7a931f1
+SHA256: 4812ae56c0b655e1d596647fbf87e55f2efa1d58522991bae32c9e1ba7d7fe1b
+SHA512: 564f4c0d5938cfe53458625dea5a2a2384eacfe9d5d4ea325af898bbb3286cbd43d58433f77540c78a874d3850511211547686e3d50b54f302955354b12c5716
+

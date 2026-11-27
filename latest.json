@@ -1,6 +1,6 @@
 {
   "package": "vn.cloud247.carplay-rebuild.m1",
-  "version": "1.0.4.1",
-  "build": 261,
-  "notes": "OFFB 1.0.4.1+offb1: tên/icon OFFB, license như offb4, tự dùng thử 15 ngày cho máy mới. Chủ máy đã xác nhận cài thành công; kho vẫn giữ offb4 để lựa chọn."
+  "version": "1.0.4.2",
+  "build": 262,
+  "notes": "OFFB 1.0.4.2+offb1: Mát 30 Hz, thu nhỏ HUD, khôi phục module và thay đổi xử lý video/scene. Giữ license OFFB và trial 15 ngày. Bản mới cần cài thử; kho vẫn giữ 1.0.4.1 và offb4."
 }

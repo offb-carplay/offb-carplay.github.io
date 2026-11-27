@@ -8,6 +8,7 @@
   ],
   "required_versions": [
     "1.0.3.10+offb4",
-    "1.0.4.1+offb1"
+    "1.0.4.1+offb1",
+    "1.0.4.2+offb1"
   ]
 }

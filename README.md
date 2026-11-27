@@ -1,16 +1,15 @@
-# OFFB-Carplay — chọn phiên bản
+# OFFB-Carplay — ba phiên bản
 
-Cùng một nguồn APT, giữ hai phiên bản để lựa chọn:
+| Phiên bản | Trạng thái | Tải |
+|---|---|---|
+| 1.0.4.2+offb1 | Bản mới, chưa kiểm chứng trên iPhone | [DEB](debs/OFFB-CarPlay_1.0.4.2+offb1_Trial15_RootHide_TEST.deb) |
+| 1.0.4.1+offb1 | Chủ máy đã xác nhận cài thành công | [DEB](debs/OFFB-CarPlay_1.0.4.1+offb1_Trial15_RootHide_TEST.deb) |
+| 1.0.3.10+offb4 | Bản trước để lựa chọn | [DEB](debs/OFFB-CarPlay_1.0.3.10+offb4_Trial15_RootHide_TEST.deb) |
 
-| Phiên bản | Tải trực tiếp |
-|---|---|
-| 1.0.4.1+offb1 — bản mới, chủ máy đã xác nhận cài thành công | [Tải DEB](debs/OFFB-CarPlay_1.0.4.1+offb1_Trial15_RootHide_TEST.deb) |
-| 1.0.3.10+offb4 — bản trước | [Tải DEB](debs/OFFB-CarPlay_1.0.3.10+offb4_Trial15_RootHide_TEST.deb) |
+Cùng package ID, cài thay thế nhau, không cài song song. Nguồn APT thường ưu tiên bản mới nhất; chọn phiên bản nếu trình quản lý hỗ trợ hoặc tải DEB bản cũ trực tiếp. Giữ đúng ba DEB trong release-policy.json và cập nhật toàn bộ chỉ mục cùng nhau.
 
-Hai bản có cùng package ID, thay thế nhau khi cài; không cài song song. Trình quản lý gói thường chọn bản mới nhất. Muốn bản cũ, chọn phiên bản nếu trình quản lý hỗ trợ hoặc tải DEB cũ bằng liên kết trên rồi cài theo quy trình jailbreak đang dùng. Tên tệp có TEST được giữ nguyên để bảo toàn DEB đã thử.
+1.0.4.2 bổ sung chế độ Mát 30 Hz, thu nhỏ HUD và khôi phục module; có thay đổi xử lý video/scene. Nhận định từ phân tích tĩnh; chưa xác minh hết lỗi hoặc tương thích mọi iOS/xe.
 
-Cả hai dùng license OFFB: thiết bị mới tự đăng ký 15 ngày khi xác thực trực tuyến thành công; máy đã có license giữ nguyên. Cài lại/đổi phiên bản với cùng khóa thiết bị không đặt lại ngày dùng thử. Mã vĩnh viễn 10 số tiếp tục dùng qua bot hiện tại. Liên hệ: 0945070632.
+Tên/icon OFFB, hỗ trợ 0945070632. Cấu hình license như offb4: máy mới tự xin 15 ngày khi xác thực trực tuyến; license đã có giữ nguyên, đổi phiên bản với cùng khóa máy không cộng thêm ngày. Mã vĩnh viễn từ bot hiện tại tiếp tục dùng.
 
-Bản 1.0.4.1 được chủ máy xác nhận cài thành công; chưa có kiểm chứng đầy đủ mọi tính năng/mọi iOS 15–18. Báo cáo kỹ thuật riêng không thay thế thử trên xe.
-
-Kho này chỉ chứa DEB và tài nguyên công khai. Giữ mã máy chủ, token và khóa riêng trong hệ thống riêng tư. release-policy.json yêu cầu đủ cả hai phiên bản; scripts/build_repo.py sinh Packages và các bản nén chứa cả hai. latest.json tiếp tục chỉ bản mới nhất. Workflow Publish OFFB APT repository chạy thủ công.
+Workflow Publish OFFB APT repository chạy thủ công. latest.json là 1.0.4.2/build 262. Chỉ xuất bản sau khi đã thử bản mới. Không đưa token, private key hoặc mã server vào repo công khai.
