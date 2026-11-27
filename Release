@@ -2,19 +2,19 @@ Origin: OFFB CarPlay
 Label: OFFB CarPlay — Experimental
 Suite: stable
 Codename: offb
-Date: Fri, 27 Nov 2026 02:26:23 GMT
+Date: Fri, 27 Nov 2026 07:41:40 GMT
 Architectures: iphoneos-arm64e
 Components: main
 Description: OFFB CarPlay experimental package repository
 MD5Sum:
- d054e8d7a371169aa1c6e86818bf0ddf              896 Packages
- 60d9ca175bbfae9033b5b186968bc89c              635 Packages.gz
- d5ceeebdd43c1337a887008bb8aacbda              706 Packages.bz2
+ 76c2f67019f70606c5aabe38ee49aa1b             1860 Packages
+ 14120ebb507d3736040d73f7327825a2              845 Packages.gz
+ 2b95274707a2203be14a6ba951369c16             1022 Packages.bz2
 SHA256:
- 9180fc1e6f322955bfc445f25dab203b2b109fb10c683f3ddf154b63a017e677              896 Packages
- f635e083c2e8ba740ff144eb0edf4dd095bdd744ceb24b97005aee8200d21294              635 Packages.gz
- de75d4c8bad35e9a5493d1e1545b39e95f91310a9801c63f6bd27383612bc8c2              706 Packages.bz2
+ f4ed4ed13c7bafa3a821d40e6c689bfeee97dbd42e79e17417b10d96dec3e4aa             1860 Packages
+ d0b6eb580b27298474b9ec89d5bfba80448e419444d925d6874ffbdd8575bb0b              845 Packages.gz
+ e104aa688c0cfe453ec868b22f8d42e466ca38de76e0be76df57ebbf7c8c2cab             1022 Packages.bz2
 SHA512:
- 9ff50f568d602489200f7570953f50f51626b286a160f7d78c61553742563529fbdd71e232f17d6926957d068b681dd682ad99a71007579fd80c90d929282ac3              896 Packages
- b80ece6ef9aea4b0ba91392365b3db3289586101157d091d2c804f91aea73d6760358d400a5d18f1a0ac98d7b293dcea6ca85c63d172e4a29bb543da4297fce8              635 Packages.gz
- ef903a70b65b4bf646d4857dfea7661868a0ed9fb03463656e511fade4594ebc1529ced3116a7e119eef22b938fb3e90875981c35da2ab37f6312b0d4a3fa9a3              706 Packages.bz2
+ c235c2360746fc5217dc9c5da170773ee8f4bd2eb6313bf56a3d1da79a4a4bb07c2d95b0ee5845438d832738c7ce27fd4c4240b89ea86179fc3c9f2fb59005a6             1860 Packages
+ ffe8138d4bbe35507ce851cc2f4eb24cbf5de6bca0ddae0d4a1d6869c577d801d9e32ee0bfd7c105ccc82edcdb5499210876a4a24ea34409ea663351f2008563              845 Packages.gz
+ fdcfdc2da0347034aad4f277f3d05f52138c791d47a43744f23d69c37c8c9a0de13b49565015d39bb25f456d3dfd779810e0a33e3c2ddcb50abb281be3897fce             1022 Packages.bz2

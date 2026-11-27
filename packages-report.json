@@ -6,5 +6,13 @@
     "Filename": "debs/OFFB-CarPlay_1.0.3.10+offb4_Trial15_RootHide_TEST.deb",
     "Size": "3630780",
     "SHA256": "30a4936ef83b85188c88d28be2f3f0e4eb99c9ef437d14cb72357631f5b439a3"
+  },
+  {
+    "Package": "vn.cloud247.carplay-rebuild.m1",
+    "Version": "1.0.4.1+offb1",
+    "Architecture": "iphoneos-arm64e",
+    "Filename": "debs/OFFB-CarPlay_1.0.4.1+offb1_Trial15_RootHide_TEST.deb",
+    "Size": "4304324",
+    "SHA256": "ac9a3b076e8c7216de2566abf933b156829ddca807930834dfd8bfa13045fffe"
   }
 ]

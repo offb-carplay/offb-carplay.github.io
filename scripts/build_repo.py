@@ -61,8 +61,11 @@ def control_fields(data):
 
 
 def validate_policy(data, fields, policy):
-    if fields['Package'] != policy['required_package'] or fields['Version'] != policy['required_version']:
-        raise ValueError('Unexpected release in debs/: keep only the version selected in release-policy.json')
+    versions = policy.get('required_versions')
+    if not isinstance(versions, list) or not versions or len(set(versions)) != len(versions):
+        raise ValueError('release-policy.json must list distinct required_versions')
+    if fields['Package'] != policy['required_package'] or fields['Version'] not in versions:
+        raise ValueError('Unexpected package/version in debs/: use required_versions in release-policy.json')
     members = ar_members(data)
     payloads = [v for k, v in members.items() if k.startswith('data.tar.') or k == 'data.tar']
     if len(payloads) != 1:
@@ -100,8 +103,11 @@ def build(root):
             MD5sum=hashlib.md5(data).hexdigest(), SHA256=hashlib.sha256(data).hexdigest(), SHA512=hashlib.sha512(data).hexdigest())
         entries.append('\n'.join(f'{k}: {v}' for k, v in fields.items()) + '\n\n')
         reports.append({k: fields[k] for k in ['Package', 'Version', 'Architecture', 'Filename', 'Size', 'SHA256']})
-    if policy and not reports:
-        raise ValueError('No approved DEB found in debs/')
+    if policy:
+        expected = set(policy['required_versions'])
+        actual = {row['Version'] for row in reports}
+        if actual != expected:
+            raise ValueError('Missing required DEB versions: ' + ', '.join(sorted(expected - actual)))
     packages = ''.join(entries).encode('utf-8')
     indexes = {'Packages': packages, 'Packages.gz': gzip.compress(packages, mtime=0), 'Packages.bz2': bz2.compress(packages)}
     for filename, content in indexes.items():
