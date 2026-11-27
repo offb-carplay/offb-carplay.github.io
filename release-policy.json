@@ -1,5 +1,10 @@
 {
   "required_package": "vn.cloud247.carplay-rebuild.m1",
-  "required_version": "1.0.3.8+offb2",
-  "forbidden_payload_filenames": ["OFFBBranding.dylib", "OFFBBranding.plist"]
+  "required_version": "1.0.3.10+offb4",
+  "forbidden_payload_filenames": [
+    "OFFBBranding.dylib",
+    "OFFBBranding.plist",
+    "CPR00OFFBLicenseRoute.dylib",
+    "CPR00OFFBLicenseRoute.plist"
+  ]
 }
